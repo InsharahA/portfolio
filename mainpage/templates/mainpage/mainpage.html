@@ -4,9 +4,21 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/info.css' %}">
+    <script src="{% static 'javascript/info.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit-icons.min.js"></script>
 
 </head>
 <html>
@@ -14,69 +26,39 @@
         <section id="about-section">
             {% include 'mainpage/about.html' %}
         </section>
-    
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #e2c804ca;">
-        <a class="navbar-brand" href="#">IA</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <ul class="navbar-nav nav-pills">
-            <li class="nav-item active">
-                <a class="nav-link active" href="#">About me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Connect with me</a>
-              </li>
-              </ul>
-        
-        </div>
-      </nav>
-      <p>
-        I'm a Software Engineer with over 4 years of experience in software development and cloud technologies.
-🎓
-Currently working toward my Honours Bachelor of Science in Computer Science at Ontario Tech University, I'm all about building reliable, scalable software that makes a difference.
-🛠
-From full-stack development to cloud-based solutions, I've led enterprise-level projects that streamline operations and deliver real impact.
-🔧
-I enjoy automating workflows, optimizing systems, and turning complex challenges into real results. 📈
-💡
-I'm always curious and constantly learning
-I'm a Software Engineer with over 4 years of experience in software development and cloud technologies.
-🎓
-Currently working toward my Honours Bachelor of Science in Computer Science at Ontario Tech University, I'm all about building reliable, scalable software that makes a difference.
-🛠
-From full-stack development to cloud-based solutions, I've led enterprise-level projects that streamline operations and deliver real impact.
-🔧
-I enjoy automating workflows, optimizing systems, and turning complex challenges into real results. 📈
-💡
-I'm always curious and constantly learning
 
-      </p>
-      <h1>
-        I'm a Software Engineer with over 4 years of experience in software development and cloud technologies.
-🎓
-Currently working toward my Honours Bachelor of Science in Computer Science at Ontario Tech University, I'm all about building reliable, scalable software that makes a difference.
-🛠
-From full-stack development to cloud-based solutions, I've led enterprise-level projects that streamline operations and deliver real impact.
-🔧
-I enjoy automating workflows, optimizing systems, and turning complex challenges into real results. 📈
-💡
-I'm always curious and constantly learningI'm a Software Engineer with over 4 years of experience in software development and cloud technologies.
-🎓
-Currently working toward my Honours Bachelor of Science in Computer Science at Ontario Tech University, I'm all about building reliable, scalable software that makes a difference.
-🛠
-From full-stack development to cloud-based solutions, I've led enterprise-level projects that streamline operations and deliver real impact.
-🔧
-I enjoy automating workflows, optimizing systems, and turning complex challenges into real results. 📈
-💡
-I'm always curious and constantly learning
-      </h1>
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #e2c804ca;">
+        <a class="navbar-brand" href="#"><img src="{% static 'images/logo.PNG' %}" alt="IA" id="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-pills mx-auto">
+                <!-- Centered menu -->
+                <li class="nav-item active">
+                    <a class="nav-link active" href="#info">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Connect with me</a>
+                </li>
+            </ul>
+    
+            <div class="ml-auto">
+                <!-- Right-aligned links -->
+                <a class="nav-link d-inline" href="https://github.com/InsharahA"target="_blank" ><img src="{% static 'images/github-mark.PNG' %}" alt="Github" id="logo"></a>
+                <a class="nav-link d-inline" href="https://www.linkedin.com/in/insharahansari/" target="_blank"><img src="{% static 'images/LI-In-Bug.PNG' %}" alt="Linkedin" id="logo"></a>
+            </div>
+        </div>
+    </nav>
+    
+      <div id="info">
+        {% include 'mainpage/info.html' %}
+      </div>
+     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const typingText = document.querySelector('.typing-effect');

@@ -7,8 +7,14 @@
   .child-1 {
     background-image: url("/static/images/insh.jpg");
     flex:1;
-    background-size: cover;
+    padding-left: 0%;
+    margin-left: 0%;
+    background-size: cover; /*Scales the image to fit inside the container */
+    background-position: center;
     background-repeat: no-repeat;
+    /* Adjust based on the desired container size */
+    height:auto;
+    width: 100%;
 }
 
 

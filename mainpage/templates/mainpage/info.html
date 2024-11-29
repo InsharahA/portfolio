@@ -1,0 +1,49 @@
+{% load static %}
+<div class="infosection container-fluid">
+    <div class="left">
+    
+    </div>
+    <div class="right" id="right">
+
+    </div>
+    <div class="infocontent">
+        <p><h3>Hey there! 👋</h3> <br>I'm a computer science engineer fueled by a passion for building impactful solutions. 
+            From crafting sleek web designs to diving into robust software development, I thrive on turning ideas into reality. 
+            With experience in AWS, Azure (certified!), SAP, Java, Python, MySQL and tools like React, Selenium, and Git, I blend technical know-how with a love for continuous learning.
+             Agile methodologies? Been there. Cloud computing? Love it.❤️ <br>
+             And if I’m not immersed in tech, you’ll probably find me traveling, exploring new places, and recharging my creativity.✈️<br>
+             <br>
+             <h4>Let’s create something amazing together!🤗</h4>
+
+        </p>
+    
+    
+        </div>
+    
+    </div>
+    
+    <div class="container-fluid d-flex justify-content-center align-items-center" uk-parallax="background-color:rgba(1, 1, 1, 0.799),rgba(200, 200, 200, 0.851)" id="skillsbanner" style="padding: 7vh;background-color:rgba(181, 181, 181, 0.851)">
+       <h1>Skills</h1> 
+    </div>
+    <div class="container-fluid bg-dark text-light test-color ombre-background " >
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-2  uk-transition-scale-up uk-transition-opaque uk-transition-toggle">
+        {% for file in files %}
+        <div class="col d-flex flex-column align-items-center">
+            <!-- Image container -->
+            <div class="card  align-items-center card-body" style="background-color: rgba(255, 255, 255, 0.741); width:70%;padding-left: 0%;padding-right:0%;">
+                <img class="img-fluid mb-2" src="{% static 'images/skills/' %}{{ file }}" alt="{{ file }}" style="width: 125px; height: 125px; object-fit: contain;">
+                <!-- Image name container -->
+                <p class="px-3 py-1 rounded-lg font-semibold text-center text-dark fw-bold">{{ file|slice:":-4"}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+      </div>
+
+
+
+
+
+    
+    
