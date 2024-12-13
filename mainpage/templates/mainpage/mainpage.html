@@ -10,9 +10,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
-    <link rel="stylesheet" href="{% static 'css/info.css' %}">
+    <link rel="stylesheet" href="{% static 'css/infotop.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projects.css' %}">
     <script src="{% static 'javascript/info.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!--<script src="{% static 'js/main.4076b546.js' %}"></script>
+
     <!-- UIkit CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/css/uikit.min.css" />
 
@@ -37,10 +40,10 @@
             <ul class="navbar-nav nav-pills mx-auto">
                 <!-- Centered menu -->
                 <li class="nav-item active">
-                    <a class="nav-link active" href="#info">About me</a>
+                    <a class="nav-link" href="#info">About me</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Projects</a>
+                    <a class="nav-link" href="#projects">Projects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Connect with me</a>
@@ -58,6 +61,20 @@
       <div id="info">
         {% include 'mainpage/info.html' %}
       </div>
+      <div id="projects">
+        {% include 'mainpage/projects.html' %}
+       
+        
+
+        
+
+      </div>
+      <script>
+        // Expose the STATIC_URL to React via a global variable
+        window.staticUrl = "{{ static_url }}";
+    </script>
+      <div id="app-container" >
+      </div>
      
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -67,6 +84,7 @@
             });
         });
     </script>
+    <script src="http://localhost:3000/static/js/bundle.js"></script>
 </body>
 
 </html>

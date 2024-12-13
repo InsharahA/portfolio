@@ -1,0 +1,14 @@
+#projectsmain{
+    height: 90vh;
+    display: flex;
+    justify-content:justify;
+    align-items: center;
+}
+
+#projectsmain h1{
+    flex:1;
+    text-align: left;
+}
+#projectsmain button{
+    flex: 1;
+}

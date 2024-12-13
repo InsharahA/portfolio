@@ -25,13 +25,13 @@
     <div class="container-fluid d-flex justify-content-center align-items-center" uk-parallax="background-color:rgba(1, 1, 1, 0.799),rgba(200, 200, 200, 0.851)" id="skillsbanner" style="padding: 7vh;background-color:rgba(181, 181, 181, 0.851)">
        <h1>Skills</h1> 
     </div>
-    <div class="container-fluid bg-dark text-light test-color ombre-background " >
+    <div class="container-fluid bg-dark text-light test-color ombre-background " style="padding-bottom: 5px;">
       <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-2  uk-transition-scale-up uk-transition-opaque uk-transition-toggle">
         {% for file in files %}
         <div class="col d-flex flex-column align-items-center">
             <!-- Image container -->
-            <div class="card  align-items-center card-body" style="background-color: rgba(255, 255, 255, 0.741); width:70%;padding-left: 0%;padding-right:0%;">
-                <img class="img-fluid mb-2" src="{% static 'images/skills/' %}{{ file }}" alt="{{ file }}" style="width: 125px; height: 125px; object-fit: contain;">
+            <div class="card  align-items-center card-body" style="background-color: rgba(255, 255, 255, 0.741); width:70%;padding-left: 0%;padding-right:0%;height: min-content;">
+                <img class="img-fluid mb-2" src="{% static 'images/skills/' %}{{ file }}" alt="{{ file }}" style="width: 100px; height: 100px; object-fit: contain;">
                 <!-- Image name container -->
                 <p class="px-3 py-1 rounded-lg font-semibold text-center text-dark fw-bold">{{ file|slice:":-4"}}</p>
             </div>

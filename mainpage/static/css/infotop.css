@@ -1,0 +1,90 @@
+.infosection{
+    display: flex;
+    background-color: #F4F3EF;
+height: 80vh;
+margin: 0%;
+padding: 0%;
+position: relative;
+overflow:auto;
+}
+
+.left {
+    flex: 2; /* Takes 2 parts of the ratio */
+    padding: 0; /* Optional padding */
+    background-image: url("/static/images/infobg.jpg");
+    background-position: top;
+    background-size: contain;
+background-repeat: no-repeat;    
+}
+
+.right {
+    flex: 1; /* Takes 1 part of the ratio */
+   
+    padding: 0; /* Optional padding */
+    background-image: url("/static/images/infobg2.jpg");
+    background-position: right;
+    margin: 0%;
+    background-repeat: no-repeat;    
+    background-size: contain;
+    animation: slideBackground 2s ease forwards;
+    animation-play-state: paused;
+    
+
+}
+
+@keyframes slideBackground {
+    0% {
+        background-position: 180% 0; /* Start completely off-screen */
+    }
+    100% {
+        background-position: 100% 0; /* Stop at the intended position */
+    }
+}
+
+.infocontent{
+
+    font-family: "Karla", sans-serif;
+    font-size:larger;
+    font-weight:light;
+    background-color: rgba(251, 251, 251, 0.75);
+    margin: 3%;
+    order: -1;
+position: absolute;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  
+  z-index: 10; 
+}
+
+.infocontent h4{
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+  font-style: normal;
+}
+
+#skillsbanner h1{
+
+    font-family: "Karla", sans-serif;
+    font:12px;
+    font-weight:normal;
+    color: black;
+}
+
+.ombre-background {
+   
+    background: linear-gradient(45deg, #FF6A00, #D800D8, #00B3B3, #FF00FF);
+    background-size: 500% 500%;
+    animation: gradientMove 10s ease infinite;
+  }
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
